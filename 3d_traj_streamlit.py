@@ -10,7 +10,7 @@ import numpy as np
 import seaborn as sns
 import streamlit as st
 import firebase_admin
-from firebase_admin import credentials, firestore
+from firebase_admin import firestore
 
 # Check if the app is already initialized
 if not firebase_admin._apps:
