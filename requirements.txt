@@ -1,3 +1,4 @@
+altair==4.2.0
 firebase-admin==6.6.0
 numpy==1.26.0
 pandas==1.4.3
