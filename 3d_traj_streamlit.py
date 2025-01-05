@@ -10,11 +10,19 @@ import numpy as np
 import seaborn as sns
 import streamlit as st
 import firebase_admin
-from firebase_admin import firestore
+from firebase_admin import credentials, firestore
+import json
 
-# Check if the app is already initialized
+# Load credentials from Streamlit secrets
+goog_credentials = st.secrets["GOOGLE_APPLICATION_CREDENTIALS"]
+
+# If using the JSON string stored in secrets
+cred_dict = json.loads(goog_credentials)
+cred = credentials.Certificate(cred_dict)
+
+# Initialize Firebase
 if not firebase_admin._apps:
-    firebase_admin.initialize_app()
+    firebase_admin.initialize_app(cred)
 
 db = firestore.client()
 
