@@ -1,5 +1,5 @@
 firebase-admin==6.6.0
-numpy @ file:///D:/bld/numpy_1695291226974/work/dist/numpy-1.26.0-cp310-cp310-win_amd64.whl#sha256=f88d3606e1988d3dff3d5c6f7e665ab3286b1a6859982e79ee3200378b83ebae
+numpy==1.26.0
 pandas==1.4.3
 plotly==5.24.1
 seaborn==0.11.2
