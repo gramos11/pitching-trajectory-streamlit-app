@@ -74,7 +74,7 @@ def plot_pitch_trajectories_with_endpoints_3d(player_name):
     
     # Add ground plane
     fig.add_trace(go.Surface(
-        z=np.full((10, 10), strike_zone_bottom-0.5),
+        z=np.full((10, 10), strike_zone_bottom-1.5),
         x=np.linspace(-5, 5, 10),
         y=np.linspace(8, 45, 10),
         colorscale=[[0, 'green'], [1, 'green']],
@@ -85,7 +85,7 @@ def plot_pitch_trajectories_with_endpoints_3d(player_name):
     
     # Add mound plane
     fig.add_trace(go.Surface(
-        z=np.full((10, 10), strike_zone_bottom-0.5),
+        z=np.full((10, 10), strike_zone_bottom-1.5),
         x=np.linspace(-5, 5, 10),
         y=np.linspace(45, 75, 10),
         colorscale=[[0, 'brown'], [1, 'brown']],
@@ -96,7 +96,7 @@ def plot_pitch_trajectories_with_endpoints_3d(player_name):
     
     # Add batter's box plane
     fig.add_trace(go.Surface(
-        z=np.full((10, 10), strike_zone_bottom-0.5),
+        z=np.full((10, 10), strike_zone_bottom-1.5),
         x=np.linspace(-5, 5, 10),
         y=np.linspace(0, 8, 10),
         colorscale=[[0, 'brown'], [1, 'brown']],
@@ -195,10 +195,10 @@ def plot_pitch_trajectories_with_endpoints_3d(player_name):
     scene=dict(
         xaxis=dict(range=[-4, 4], showticklabels=False, title=''),
         yaxis=dict(range=[1, 60], showticklabels=False, title=''),
-        zaxis=dict(range=[0.8, 7], showticklabels=False, title=''),
+        zaxis=dict(range=[0, 7], showticklabels=False, title=''),
         aspectratio=dict(x=1, y=12, z=1),
         camera=dict(
-            eye=dict(x=0, y=-6.45, z=-0.25)
+            eye=dict(x=0, y=-6.80, z=-0.05)
         ),
     ),
     legend=dict(
